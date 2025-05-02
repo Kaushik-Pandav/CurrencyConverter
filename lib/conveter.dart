@@ -141,13 +141,11 @@ class _ConveterState extends State<Conveter> {
                                     borderRadius: BorderRadius.circular(8),
                                     color: Colors.white,
                                   ),
-                                  child: Center(
-                                    child: Text(
-                                      value,
-                                      style: TextStyle(
-                                        fontSize: 22,
-                                        color: Colors.black,
-                                      ),
+                                  child: Text(
+                                    value,
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      color: Colors.black,
                                     ),
                                   ),
                                 ),
@@ -174,6 +172,31 @@ class _ConveterState extends State<Conveter> {
                               },
                               child: Text(
                                 "Convert",
+                                style: TextStyle(fontSize: 20, color: Colors.black),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 50,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.yellow,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  value="0";
+                                  c.text="";
+                                });
+                              },
+                              child: Text(
+                                "Refresh",
                                 style: TextStyle(fontSize: 20, color: Colors.black),
                               ),
                             ),
