@@ -72,14 +72,15 @@ class _ConveterState extends State<Conveter> {
                             children: [
                               Expanded(
                                 child: DropdownButton<String>(
+                                  menuWidth: 120,
                                   value: BaseCurrency,
-                                  dropdownColor: Colors.blue,
-                                  style: TextStyle(color: Colors.white, fontSize: 20),
+                                  dropdownColor: Colors.amber.shade100,
+                                  style: TextStyle(color: Colors.amber.shade900, fontSize: 20,fontWeight: FontWeight.w600),
                                   isExpanded: true,
                                   items: Type.map((currency) {
                                     return DropdownMenuItem<String>(
                                       value: currency,
-                                      child: Text(currency),
+                                      child: Center(child: Text(currency)),
                                     );
                                   }).toList(),
                                   onChanged: (String? e) {
@@ -96,7 +97,7 @@ class _ConveterState extends State<Conveter> {
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.grey),
                                     borderRadius: BorderRadius.circular(8),
-                                    color: Colors.white,
+                                    color: Colors.amber.shade100,
                                   ),
                                   child: TextField(
                                     controller: c,
@@ -115,14 +116,15 @@ class _ConveterState extends State<Conveter> {
                             children: [
                               Expanded(
                                 child: DropdownButton<String>(
+                                  menuWidth: 120,
                                   value: targetCurrency,
-                                  dropdownColor: Colors.blue,
-                                  style: TextStyle(color: Colors.white, fontSize: 20),
+                                  dropdownColor: Colors.amber.shade100,
+                                  style: TextStyle(color: Colors.amber.shade900, fontSize: 20,fontWeight: FontWeight.w600),
                                   isExpanded: true,
                                   items: Type.map((currency) {
                                     return DropdownMenuItem<String>(
                                       value: currency,
-                                      child: Text(currency),
+                                      child: Center(child: Text(currency)),
                                     );
                                   }).toList(),
                                   onChanged: (String? e) {
@@ -139,7 +141,7 @@ class _ConveterState extends State<Conveter> {
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.grey),
                                     borderRadius: BorderRadius.circular(8),
-                                    color: Colors.white,
+                                    color: Colors.amber.shade100,
                                   ),
                                   child: Text(
                                     value,

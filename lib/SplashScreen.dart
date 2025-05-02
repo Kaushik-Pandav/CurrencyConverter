@@ -25,7 +25,7 @@ class _SplashscreenState extends State<Splashscreen> {
     return Scaffold(
       backgroundColor: Colors.green.shade100,
         body: Center(
-          child: Container(height: 300,child: Lottie.asset("Assets/splashscreen.json")),
+          child: SizedBox(height: 300,child: Lottie.asset("Assets/splashscreen.json")),
         ),
     );
   }
